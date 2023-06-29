@@ -1,5 +1,5 @@
 export const SmallCardsContainer = ({ containerTitle, cards }) => {
-  console.log(cards);
+  
   return (
     <div>
       <h2>{containerTitle}</h2>
