@@ -3,8 +3,8 @@ import { Home } from '../pages/Home.jsx';
 import { About } from '../pages/About.jsx';
 import { Careers } from '../pages/Careers.jsx';
 import { Location } from '../pages/Location.jsx';
+import { Button } from './Button.jsx';
 export const Header = () => {
-
   const routes = [
     {
       path: '/',
@@ -44,7 +44,7 @@ export const Header = () => {
           <NavLink to="careers">Careers</NavLink>
           <NavLink to="location">Location</NavLink>
         </nav>
-        <button>Get Scootin</button>
+        <Button text="Get Scootin" link="about" />
       </div>
       <h1>{pageTitle}</h1>
     </header>
