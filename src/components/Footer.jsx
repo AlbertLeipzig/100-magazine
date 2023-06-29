@@ -13,12 +13,20 @@ export const Footer = () => {
         <h2>Sign up and Scoot off today</h2>
         <button>
           <a href="https://www.apple.com/de/app-store/" target="_blank">
-            <img src={appleStoreIcon} alt="apple store icon" />
+            <img
+              src={appleStoreIcon}
+              alt="apple store icon"
+              style={{ height: '60px' }}
+            />
           </a>
         </button>
         <button>
           <a href="https://store.google.com/?pli=1&hl=de" target="_blank">
-            <img src={googleStoreIcon} alt="google store icon" />
+            <img
+              src={googleStoreIcon}
+              alt="google store icon"
+              style={{ height: '60px' }}
+            />
           </a>
         </button>
       </div>
@@ -32,13 +40,25 @@ export const Footer = () => {
         </nav>
         <menu>
           <a href="https://www.facebook.com/" target="_blank">
-            <img src={facebookIcon} alt="facebook icon" />
+            <img
+              src={facebookIcon}
+              alt="facebook icon"
+              style={{ height: '40px' }}
+            />
           </a>
           <a href="https://www.instagram.com/" target="_blank">
-            <img src={instagramIcon} alt="instagram icon" />
+            <img
+              src={instagramIcon}
+              alt="instagram icon"
+              style={{ height: '40px' }}
+            />
           </a>
           <a href="https://twitter.com/" target="_blank">
-            <img src={twitterIcon} alt="twitter icon" />
+            <img
+              src={twitterIcon}
+              alt="twitter icon"
+              style={{ height: '40px' }}
+            />
           </a>
         </menu>
       </div>
