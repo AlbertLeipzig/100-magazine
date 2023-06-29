@@ -29,7 +29,7 @@ export const Header = () => {
   ];
   const pageTitle = useRoutes(routes);
   <Routes>
-    <Route path="/" element={<Home />} />
+    <Route exact path="/" element={<Home />} />
     <Route path="about" element={<About />} />
     <Route path="careers" element={<Careers />} />
     <Route path="location" element={<Location />} />
