@@ -6,7 +6,7 @@ export const ContentCard = ({ title, description, image, link }) => {
       <p>
         {description}
       </p>
-      <Button text="Click me" link={link} />
+      {link && <Button text="Click me" link={link} />}
       <img
         src={image}
         alt={`${title} image`}
