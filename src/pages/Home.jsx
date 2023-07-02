@@ -1,7 +1,8 @@
 import { SmallCardsContainer } from '../components/SmallCardsContainer';
 import { ContentCard } from '../components/ContentCard';
-
-const cardsData = [
+import generic from '../../public/assets/generic.png';
+import { Button } from '../components/Button';
+const bigCardsData = [
   {
     image:
       'https://images.unsplash.com/photo-1572016047668-5b5e909e1605?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNtYXJ0cGhvbmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
@@ -23,26 +24,64 @@ const cardsData = [
   },
 ];
 
+const smallCardsData = [
+  {
+    title: 'Locate with app',
+    description:
+      'Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away.',
+    image:
+      'https://images.unsplash.com/photo-1633409361618-c73427e4e206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWNvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      link : "#"
+  },
+  {
+    title: 'Pick your scooter',
+    description:
+      'We show the most important info for the scooters closest to you. So you know how much charge they have left and can see roughly how much it will cost.',
+    image:
+      'https://images.unsplash.com/photo-1633409361618-c73427e4e206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWNvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      link : "#"
+  },
+  {
+    title: 'Enjoy the ride',
+    description:
+      "Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, and you're off! Always lock bikes away from walkways and accessibility ramps.",
+    image:
+      'https://images.unsplash.com/photo-1633409361618-c73427e4e206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWNvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+      link : "#"
+  },
+];
+
 export const Home = () => {
   return (
     <>
+      <img
+        src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&auto=format&fit=crop&w=1170&q=80"
+        alt="GENERIC"
+        style={{ height: '300px', width: '300px', backgroundColor: 'red' }}
+      />
       <div>
         <h1>Scooter sharing made simple</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic doloribus
-          delectus harum, debitis aliquam minima maxime! Ab vitae, at, eum
-          molestiae hic, illum optio magnam harum consequuntur itaque accusamus
-          iure?
+          Scoot takes the hassle out of urban mobility. Our bikes are placed in
+          convenient locations in each of our cities. Use our app to locate the
+          nearest bike, unlock it with a tap, and you're away!
         </p>
-        <b>Get Scootin</b>
+        <Button text="get scootin" link="#" />
       </div>
-      {cardsData.map((card) => (
-        <ContentCard card={card} />
+      <>
+        {
+          smallCardsData.map(card => (
+            <div>
+              <img src={card.image} alt={card.title} style={{height : "80px", aspectRatio : 1/1}} />
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+            </div>
+          ))
+        }
+      </>
+      {bigCardsData.map((card) => (
+        <ContentCard title = {card.title} image = {card.image} description={card.description} link = {card.link}/>
       ))}
-      {/*
-       <SmallCardsContainer containerTitle="title" cards={cardsData} />
-      
-      */}
     </>
   );
 };

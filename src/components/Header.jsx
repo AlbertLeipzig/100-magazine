@@ -35,12 +35,7 @@ export const Header = () => {
     },
   ];
 
-  <Routes>
-    <Route exact path="/" element={<Home />} />
-    <Route path="about" element={<About />} />
-    <Route path="careers" element={<Careers />} />
-    <Route path="location" element={<Location />} />
-  </Routes>;
+ 
   return (
     <header>
       <div>
