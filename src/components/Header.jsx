@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Routes, Route, NavLink, useRoutes } from 'react-router-dom';
 import { Home } from '../pages/Home.jsx';
 import { About } from '../pages/About.jsx';
@@ -5,6 +6,12 @@ import { Careers } from '../pages/Careers.jsx';
 import { Location } from '../pages/Location.jsx';
 import { Button } from './Button.jsx';
 export const Header = () => {
+  const [pageTitle, setPageTitle] = useState('Home');
+
+  useEffect(() => {
+    document.title = `Scoot - ${pageTitle}`;
+  }, [pageTitle]);
+
   const routes = [
     {
       path: '/',
@@ -27,7 +34,7 @@ export const Header = () => {
       title: 'Location',
     },
   ];
-  const pageTitle = useRoutes(routes);
+
   <Routes>
     <Route exact path="/" element={<Home />} />
     <Route path="about" element={<About />} />
@@ -39,10 +46,18 @@ export const Header = () => {
       <div>
         <h2>scoot</h2>
         <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="about">About</NavLink>
-          <NavLink to="careers">Careers</NavLink>
-          <NavLink to="location">Location</NavLink>
+          <NavLink to="/" onClick={() => setPageTitle('Home')}>
+            Home
+          </NavLink>
+          <NavLink to="about" onClick={() => setPageTitle('About')}>
+            About
+          </NavLink>
+          <NavLink to="careers" onClick={() => setPageTitle('Careers')}>
+            Careers
+          </NavLink>
+          <NavLink to="location" onClick={() => setPageTitle('Location')}>
+            Location
+          </NavLink>
         </nav>
         <Button text="Get Scootin" link="about" />
       </div>
