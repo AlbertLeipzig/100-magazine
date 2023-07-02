@@ -4,5 +4,5 @@ export const Button = ({ text, link }) => {
     <button>
       <Link to={link}>{text}</Link>
     </button>
-  );
-};
+  )
+}
