@@ -4,7 +4,8 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Careers } from './pages/Careers';
-import { Location } from './pages/Location';  
+import { Location } from './pages/Location';
+import './styles/main.scss';
 function App() {
   return (
     <>

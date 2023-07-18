@@ -8,11 +8,11 @@ import { Button } from './Button.jsx';
 export const Header = () => {
   const [pageTitle, setPageTitle] = useState('Home');
 
-  useEffect(() => {
+  /* useEffect(() => {
     document.title = `Scoot - ${pageTitle}`;
-  }, [pageTitle]);
+  }, [pageTitle]); */
 
-  const routes = [
+  /* const routes = [
     {
       path: '/',
       element: <Home />,
@@ -33,7 +33,7 @@ export const Header = () => {
       element: <Location />,
       title: 'Location',
     },
-  ];
+  ]; */
 
  
   return (
